@@ -1,0 +1,14 @@
+# Local Postgres matching the default .env values. Creates both the dev and test databases.
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: evt
+      POSTGRES_PASSWORD: evt
+      POSTGRES_DB: events
+    ports: ["5432:5432"]
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db-init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+volumes:
+  pgdata:

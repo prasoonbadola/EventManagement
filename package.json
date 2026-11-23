@@ -1,0 +1,14 @@
+{
+  "name": "gathr",
+  "private": true,
+  "description": "Gathr - Event Management App",
+  "scripts": {
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "typecheck": "npm --prefix server run typecheck && npm --prefix client run typecheck",
+    "test": "npm --prefix server run test",
+    "build": "npm --prefix client run build",
+    "seed": "npm --prefix server run seed",
+    "migrate": "npm --prefix server run migrate"
+  }
+}

@@ -1,0 +1,97 @@
+.cal {
+  background: var(--card);
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  margin-right: 6px;
+}
+.dot.reg { background: var(--accent); }
+.dot.past { background: var(--muted); }
+.dot.canc { border: 2px solid var(--muted); }
+.dot.evc { background: var(--warn); }
+
+/* ── FullCalendar Theme Integration ────────────────────────────────────── */
+:root {
+  --fc-classic-background: var(--card);
+  --fc-classic-foreground: var(--ink);
+  --fc-classic-border: var(--line);
+  --fc-classic-strong-border: var(--ink);
+  --fc-classic-primary: var(--accent);
+  --fc-classic-primary-foreground: var(--accent-ink);
+  --fc-classic-event: var(--accent);
+  --fc-classic-event-contrast: var(--accent-ink);
+  --fc-classic-button: var(--card);
+  --fc-classic-button-border: var(--ink);
+  --fc-classic-button-foreground: var(--ink);
+  --fc-classic-button-strong: var(--ink);
+  --fc-classic-button-strong-border: var(--ink);
+  --fc-classic-today: rgba(200, 50, 31, 0.08);
+}
+
+[data-theme="dark"] {
+  --fc-classic-background: var(--card);
+  --fc-classic-foreground: var(--ink);
+  --fc-classic-border: var(--line);
+  --fc-classic-strong-border: var(--line);
+  --fc-classic-primary: var(--accent);
+  --fc-classic-primary-foreground: var(--accent-ink);
+  --fc-classic-event: var(--accent);
+  --fc-classic-event-contrast: var(--accent-ink);
+  --fc-classic-button: var(--card);
+  --fc-classic-button-border: var(--ink);
+  --fc-classic-button-foreground: var(--ink);
+  --fc-classic-button-strong: var(--ink);
+  --fc-classic-button-strong-border: var(--ink);
+  --fc-classic-today: rgba(200, 50, 31, 0.15);
+}
+
+.fullcalendar-container {
+  min-height: 540px;
+}
+
+.fullcalendar-container .fc {
+  font-family: inherit;
+}
+
+.fullcalendar-container .fc-event.fc-event-active {
+  background-color: var(--accent);
+  border-color: var(--ink);
+  color: var(--accent-ink);
+}
+
+.fullcalendar-container .fc-event.fc-event-past {
+  background-color: var(--line);
+  border-color: var(--muted);
+  color: var(--muted);
+}
+
+.fullcalendar-container .fc-event.fc-event-canceled {
+  background-color: transparent;
+  border-color: var(--muted);
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.fullcalendar-container .fc-event.fc-event-event-canceled {
+  background-color: var(--warn);
+  border-color: var(--ink);
+  color: var(--ink);
+  text-decoration: line-through;
+}
